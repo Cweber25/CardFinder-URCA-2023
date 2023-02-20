@@ -1,0 +1,54 @@
+
+
+.container {
+    width: 100%;
+    min-height: 10vh; /* Might Need changed later on... sets height of container */
+    padding: 0 5% 2% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search_bar {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    border-radius: 60px;
+    padding: 5px 20px;    
+}
+
+.search_bar input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    font-size: .9em;
+    color: #0f0f0f;
+
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.8)
+}
+
+.search_bar button {
+    border: 0;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    background: #2d2e2e;
+    cursor: pointer;
+}
+.search_bar button i {
+    width: 25px;
+    color: white;
+}
+
+/* Animations */
+
+.search_bar button:hover {
+    background-color: #0f0f0f;
+    transition: ease 0.3s;
+}

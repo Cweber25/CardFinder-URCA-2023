@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-
+<script type="text/javascript" src="../JavaScript/getCard.js"></script>
 <html>
     <head>
         <meta charset="utf-8">
@@ -12,8 +12,9 @@
         <link rel="stylesheet" href="../CSS/navbar.css">
         <link rel="stylesheet" href="../CSS/searchBar.css">
         <link rel="stylesheet" href="../CSS/homePageCards.css"/>
+        
     </head>
-    <body>
+    <body onload="fetchCard();">
         <header>
             <div class="navbar">
                 <div class="logo"><a href="#">CardFinder</a></div>
@@ -56,7 +57,8 @@
                 </div>
 
                 <div class="centerCard">
-                    <img class="cardImageCenter" src="../images/mtgCardBack.jpg">
+                    <!-- <img class="cardImageCenter" src="../images/mtgCardBack.jpg"> -->
+                    <img class="cardImageCenter" id="card">
                 </div>
 
                 <div class="rightArrow">

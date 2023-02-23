@@ -26,6 +26,7 @@
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
 }
 
 .arrowStyle {
@@ -34,9 +35,11 @@
     height: 50px;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 
 }
 .cardImageCenter {
+    transition: transform .45s;
     height: 250px;
     border-radius: 8px;
     box-shadow: 0 8px 6px -6px black;
@@ -46,6 +49,15 @@
     border-radius: 8px;
     box-shadow: 0 8px 6px -6px black;
 }
+/* Can be adjusted or removed, adds image scaling affect to middle card image */
+.cardImageCenter:hover {
+    transform: scale(1.4);
+    box-shadow: 0 0 3px #ccc;
+}
 
+.cardImageCenter:not(:hover)
+{
+    transition: transform .45s;
+}
 
 

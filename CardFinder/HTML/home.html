@@ -14,9 +14,9 @@
         <link rel="stylesheet" href="../CSS/navbar.css">
         <link rel="stylesheet" href="../CSS/searchBar.css">
         <link rel="stylesheet" href="../CSS/homePageCards.css"/>
-        
+        <link rel="stylesheet" href="../CSS/cardInfoBox.css"/>
     </head>
-    <body  onload="fetchCard();">  
+    <body onload="fetchCard();">  
         <!-- onload="cardList();" Add this for advancedSearch to work. -->
         <header>
             <div class="navbar">
@@ -83,8 +83,44 @@
                 
             </div>
 
+            <div class="container2">
+                <div class="cardInfoBox">
+                    <div class="cardName">
+                        <h3 id="cardName">Loading...</h2>
+                    </div>
+                    <div class="cardAttribute">
+                        <label>Rarity: <label id="cardRarity">Loading...  </label><img id="raritySymbol" src=""/></label>
+                    </div>
+                    <div class="cardAttribute">
+                        <label>Set: <label id="cardSet">Loading...</label></label>
+                    </div>
 
-            <div class="randomCards">
+                    <div class="container3">
+                        <div class="marketPrices">
+                            <h4>Current Market Prices</h4>
+                            <div class="cardPrices">
+                                <label id="USDprice"></label>
+                                <br>
+                                <label id="USDfoilPrice"></label>
+                                
+                            </div>
+                        </div>
+                        <div class="availableFrom">
+                            <h4>Available From</h4>
+                            <div class="cardLinks">
+                                <a href="" id="linkTCG" target="_blank" 
+                                rel="noopener noreferrer">TCG Player</a>
+                                <br>
+                                <a href="" id="linkCH" target="_blank" 
+                                rel="noopener noreferrer">Card Hoarder</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cardFlavorContainer">
+                        <p id="cardFlavorText"></p>
+                    </div>
+                </div>
             </div>
         </main>
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <script type="text/javascript" src="../JavaScript/getCard.js"></script>
+<script type="text/javascript" src="../JavaScript/advancedSearch.js"></script>
 
 <html>
     <head>
@@ -15,7 +16,8 @@
         <link rel="stylesheet" href="../CSS/homePageCards.css"/>
         
     </head>
-    <body onload="fetchCard();">
+    <body  onload="fetchCard();">  
+        <!-- onload="cardList();" Add this for advancedSearch to work. -->
         <header>
             <div class="navbar">
                 <div class="logo"><a href="#">CardFinder</a></div>
@@ -64,7 +66,7 @@
                     <img class="cardImageSide" src="../images/mtgCardBack.jpg">
                 </div>
                 <div class="leftArrow">
-                    <i class="fa-solid fa-chevron-left fa-3x arrowStyle"></i>
+                    <i class="fa-solid fa-chevron-left fa-3x arrowStyle" onclick="cardCallLeft();"></i>
                 </div>
 
                 <div class="centerCard">
@@ -73,7 +75,7 @@
                 </div>
 
                 <div class="rightArrow">
-                    <i class="fa-solid fa-chevron-right fa-3x arrowStyle"></i>
+                    <i class="fa-solid fa-chevron-right fa-3x arrowStyle" onclick="cardCallRight();"></i>
                 </div>
                 <div class="rightCard">
                     <img class="cardImageSide" src="../images/mtgCardBack.jpg">

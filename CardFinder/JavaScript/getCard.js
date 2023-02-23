@@ -2,6 +2,7 @@ fetchCard = async (e) => {
   // Getting the Scryfall data.
   const response = await fetch(`https://api.scryfall.com/cards/random`);
   const card = await response.json();
+  console.log(card);
 
   // Updating the card with the image data.
   const imageEl = document.getElementById("card");
@@ -20,3 +21,6 @@ searchCard = async (e) => {
   imageEl.src = card.image_uris.normal;
 
 };
+
+
+ 

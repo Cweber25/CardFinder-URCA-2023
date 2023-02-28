@@ -16,11 +16,11 @@
         <link rel="stylesheet" href="../CSS/homePageCards.css"/>
         <link rel="stylesheet" href="../CSS/cardInfoBox.css"/>
     </head>
-    <body onload="fetchCard();">  
+    <body>  
         <!-- onload="cardList();" Add this for advancedSearch to work. -->
         <header>
             <div class="navbar">
-                <div class="logo"><a href="../HTML/home.html"><img src="../images/CardFinderLogoWhite.png" id="CFlogo"></a></div>
+                <div class="logo"><a href="../HTML/home.html">CardFinder</a></div>
                 <ul class="links">
                     <li><a href="../HTML/home.html">Home</a></li>
                     <li><a href="../HTML/decks.html">Decks</a></li>
@@ -45,7 +45,7 @@
             </div>
         </header>
         <main>
-            <div class="container">
+            <!--<div class="container">
                 <form action="" method="get" class="search_bar">
                     <input type="text" placeholder="Search for a MTG card . . ." name="q" id="searchBar" onkeypress="return searchKeyPress(event);">
                     <button type="button" onclick="searchCard();" id="btn"><i class="fa-solid fa-magnifying-glass searchIcon"></i></button>
@@ -60,8 +60,8 @@
                         return true;
                     }
                 </script>
-            </div>
-            <div class="cardsContainer">
+            </div>-->
+            <!--<div class="cardsContainer">
                 <div class="leftCard">
                     <img class="cardImageSide" id="cardL" src="../images/mtgCardBack.jpg">
                 </div>
@@ -70,7 +70,7 @@
                 </div>
 
                 <div class="centerCard">
-                    <!-- <img class="cardImageCenter" src="../images/mtgCardBack.jpg"> -->
+                     <img class="cardImageCenter" src="../images/mtgCardBack.jpg">
                     <img class="cardImageCenter" id="card">
                 </div>
 
@@ -81,7 +81,7 @@
                     <img class="cardImageSide" id="cardR" src="../images/mtgCardBack.jpg">
                 </div>
                 
-            </div>
+            </div> 
 
             <div class="container2">
                 <div class="cardInfoBox">
@@ -121,7 +121,7 @@
                         <p id="cardFlavorText"></p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </main>
 
         

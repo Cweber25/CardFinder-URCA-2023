@@ -58,6 +58,7 @@ div.cardAttribute
     font-style: italic;
     font-size: 0.85em;
     text-align: center;
+    min-height: 2vh;
     padding: 2px;
 }
 
@@ -78,7 +79,7 @@ img#raritySymbol
     display: flex;
     justify-content: center;
     border-top: 1px solid #2D2E2E;
-    background-color: #bcaBAE;
+    background-color: #9e9d9d;
 }
 
 .marketPrices, .availableFrom {

@@ -19,6 +19,7 @@
     padding: 5px 20px;    
 }
 
+
 .search_bar input {
     background: transparent;
     flex: 1;
@@ -26,7 +27,6 @@
     outline: none;
     font-size: .9em;
     color: #0f0f0f;
-
 }
 
 ::placeholder {
@@ -51,4 +51,5 @@
 .search_bar button:hover {
     background-color: #0f0f0f;
     transition: ease 0.3s;
+    box-shadow: 0 0 3px #ccc;
 }

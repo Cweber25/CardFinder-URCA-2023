@@ -5,12 +5,31 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+/* logo image styling */
+img#CFlogo {
+    height: 100px;
+    padding-top: 35px;
+}
+
+@media (max-width: 992px) {
+    img#CFlogo {
+        padding-top: 5px;
+        height: 55px;
+    }
+}
+
+/* ----------------- */
 body {
-    height: 100vh;
+    /*height: 100vh;
     background-color: white;
     background-image: url(../images/black_white_gradient.png);
     background-size: cover;
-    background-position: center;
+    background-position: center;*/
+    background: url(../images/black_white_gradient.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 li {
@@ -149,6 +168,7 @@ header {
 
 .dropdown_menu.open {
     height: 240px;
+    box-shadow: 0 0 3px #ccc;
 
 }
 

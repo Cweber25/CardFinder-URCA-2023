@@ -10,8 +10,6 @@
 .leftCard, .rightCard {
     display: flex;
     height: 100%;
-    
-
 }
 .leftCard {
     padding-left: 5%;

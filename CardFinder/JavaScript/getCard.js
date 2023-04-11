@@ -7,6 +7,7 @@ fetchCard = async (e) => {
   // Updating the card with the image data.
   // const imageEl = document.getElementById("card");
   // imageEl.src = card.image_uris.normal;
+  
 };
 
 searchCard = async (e) => {
@@ -20,6 +21,9 @@ let card = await response.json();
 // Logging the card that was searched
 console.log(card)
 applyInfoAndImage(card);
+document.getElementById("cardL").src = "../images/mtgCardBack.jpg";
+document.getElementById("cardR").src = "../images/mtgCardBack.jpg";
+cardL = [];
 
 
 };

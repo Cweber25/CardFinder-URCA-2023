@@ -5,6 +5,9 @@ var cardSpot = 0;
 cardList = async (e) => {
   colors = "";
   amount = "";
+  cardL = [];
+  count = 0;
+  cardSpot = 0;
 
   if (document.getElementById("manaTypeWhite").checked) {
     colors = colors + "W";
@@ -183,3 +186,8 @@ function getPrice(card) {
   linkTCG.href = card.purchase_uris.tcgplayer;
   linkCH.href = card.purchase_uris.cardhoarder;
 }
+
+// function Clear() {
+//   cardL = [];
+//   console.log("Cleared")
+// }

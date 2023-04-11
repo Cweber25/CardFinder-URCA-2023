@@ -49,7 +49,7 @@
             <div class="container">
                 <form action="" method="get" class="search_bar">
                     <input type="text" placeholder="Search for a MTG card . . ." name="q" id="searchBar" onkeypress="return searchKeyPress(event);">
-                    <button type="button" onclick="searchCard();" id="btn"><i class="fa-solid fa-magnifying-glass searchIcon"></i></button>
+                    <button type="button" onclick=" clear(); searchCard();" id="btn"><i class="fa-solid fa-magnifying-glass searchIcon"></i></button>
                 </form>
                 <script>
                     function searchKeyPress(e) { // look for window.event in case event isn't passed in

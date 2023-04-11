@@ -2,19 +2,53 @@ var cardL = [];
 var count = 0;
 var cardSpot = 0;
 
-cardList2 = async (e) => {
-  // Calls for one mana white cards U = blue W = White
-  // https://api.scryfall.com/cards/search?q=c%3Ablack+mv%3D1
-  //                                             ^color     ^Mana amount
-  const response = await fetch(
-    `https://api.scryfall.com/cards/search?&order=name&q=color%3U/B+%28game%3Apaper%29`
-  );
+cardList = async (e) => {
+  colors = "";
+  amount = "";
+
+  if (document.getElementById("manaTypeWhite").checked) {
+    colors = colors + "W";
+  }
+  if (document.getElementById("manaTypeBlue").checked) {
+    colors = colors + "U";
+  }
+  if (document.getElementById("manaTypeBlack").checked) {
+    colors = colors + "B";
+  }
+  if (document.getElementById("manaTypeRed").checked) {
+    colors = colors + "R";
+  }
+  if (document.getElementById("manaTypeGreen").checked) {
+    colors = colors + "G";
+  }
+  if (document.getElementById("manaTypeColorless").checked) {
+    colors = "C";
+  }
+  search =
+    "https://api.scryfall.com/cards/search?&order=name&q=color%3D" +
+    colors +
+    "+%28game%3Apaper%29";
+
+  if (
+    document.getElementById("manaAmount") != null ||
+    document.getElementById("manaAmount") != ""
+  ) {
+    ph = document.getElementById("manaAmount").value;
+    amount = "+cmc%3D" + ph;
+    search = search + amount;
+  }
+  console.log(search);
+
+  const response = await fetch(search);
   const card = await response.json();
   // Puts them all in custom array
-  while (card.has_more == true && count <= 175) {
+  while (count <= card.total_cards) {
     cardL[count] = card.data[count];
     console.log(card.data[count]);
     count++;
+    if (count >= 175) {
+      break;
+    }
   }
 };
 

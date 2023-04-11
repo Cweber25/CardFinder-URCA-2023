@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <script type="text/javascript" src="../JavaScript/getCard.js"></script>
-<script type="text/javascript" src="../JavaScript/advancedSearch.js"></script>
+<script type="text/javascript" src="../JavaScript/AdvancedSearchComplete.js"></script>
 
 <html>
     <head>
@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="../CSS/searchBar.css">
         <link rel="stylesheet" href="../CSS/homePageCards.css"/>
         <link rel="stylesheet" href="../CSS/cardInfoBox.css"/>
+        <link rel="stylesheet" href="../CSS/ASdropdown.css"/>
     </head>
     <body onload="fetchCard();">  
         <!-- onload="cardList();" Add this for advancedSearch to work. -->
@@ -60,6 +61,31 @@
                         return true;
                     }
                 </script>
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-sharp fa-solid fa-sliders"></i></button>
+                    <div class="dropdown-content">
+                        <form>
+                            <fieldset>
+                              <label for="MA">Mana Amount</label><br>
+                              <input type="number" id="manaAmount" name="MA"><br>
+                              <label for="MT">Mana Type</label><br>
+                              <input type="checkbox" id="manaTypeRed" name="red" value="Red">
+                              <label for="manaTypeRed"> Red </label>
+                              <input type="checkbox" id="manaTypeBlue" name="Blue" value="Blue">
+                              <label for="manaTypeBlue"> Blue </label><br><br>
+                              <input type="checkbox" id="manaTypeGreen" name="Green" value="Green">
+                              <label for="manaTypeGreen"> Green </label>
+                              <input type="checkbox" id="manaTypeBlack" name="Black" value="Black">
+                              <label for="manaTypeBlack"> Black </label><br><br>
+                              <input type="checkbox" id="manaTypeWhite" name="White" value="White">
+                              <label for="manaTypeWhite"> White </label>
+                              <input type="checkbox" id="manaTypeColorless" name="Colorless" value="Colorless">
+                              <label for="manaTypeColorless"> Colorless </label><br><br>
+                              <input type="button" value="Submit" onclick="cardList()">
+                            </fieldset>
+                          </form>
+                    </div>
+                  </div>
             </div>
             <div class="cardsContainer">
                 <div class="leftCard">

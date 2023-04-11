@@ -50,6 +50,7 @@ cardList = async (e) => {
       break;
     }
   }
+  cardCallRight();
 };
 
 // Moves card right

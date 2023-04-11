@@ -1,7 +1,47 @@
 const express = require('express');
 const router = express.Router();
 
-router.use(logger);
+/* GET users listing. */
+
+router.get('/', function(req, res, next) {
+  res.send('respond with a resource');
+});
+
+module.exports = router;
+
+// DON'T UNDERSTAND YET
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*router.use(logger);
 
 router.get('/', (req, res) => {
     req.query.name
@@ -54,7 +94,7 @@ router.param("userId", (req, res, next, userId) => {
 function logger(req, res, next) {
     console.log(req.originalUrl);
     next();
-}
+} */
 
 // Same as above code block
 /*router.get('/:userId', (req, res) => {

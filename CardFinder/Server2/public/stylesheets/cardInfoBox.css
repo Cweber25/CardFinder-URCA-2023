@@ -1,0 +1,108 @@
+/* Modified Container that removes in-order grouping (original is on searchBar.css */
+.container2 {
+    width: 100%;
+    height: auto;
+    padding: 0 5% 2% 5%;
+    display: flex;
+    justify-content: center;
+}
+
+/* Styling for Attributes of the Card Information Box */
+.cardInfoBox {
+    display: block;
+    min-height: 15vh;
+    margin-top: 1%;
+    background-color: #716969;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+div.cardName {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 1.5px;
+    color: whitesmoke;
+    border-bottom: 1px solid #2D2E2E;
+}
+
+div.cardAttribute
+{
+    width: 100%;
+    height: fit-content;
+    text-align:left;
+    padding-top: 2px;
+    padding-left: 10px;
+    color: #2D2E2E;
+
+    font-size: 1.1em;
+}
+
+#cardSet {
+    color: #bcaBAE;
+}
+
+.cardFlavorContainer {
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    padding-bottom: 1.5px;
+    color: whitesmoke;
+}
+
+#cardFlavorText {
+    border-top: 1px solid #2D2E2E;
+    color: #9b9b9b;
+    font-style: italic;
+    font-size: 0.85em;
+    text-align: center;
+    min-height: 2vh;
+    padding: 2px;
+}
+
+/* Rarity Symbol Styling */
+
+img#raritySymbol
+{
+    height: 15px;
+    width: 15px;
+    display: inline-block;
+
+}
+
+/* Card Prices & Available Website to Purchase From (Styling) */
+.container3 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #2D2E2E;
+    background-color: #9e9d9d;
+}
+
+.marketPrices, .availableFrom {
+    width: 100%;
+    text-align: center;
+    padding-top: 2px;
+    color: whitesmoke;
+}
+
+.marketPrices {
+    border-right: 1px solid #2D2E2E;
+}
+
+.cardPrices {
+    color: black;
+}
+
+.cardLinks a {
+    color: #2D2E2E;
+}
+
+.cardLinks a:hover {
+    text-decoration: underline;
+    color: #716969;
+}
+

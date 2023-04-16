@@ -47,50 +47,23 @@
         </header>
         <main>
                 <div class="signInForm">
-                    <!-- Login Form -->
-                    <form class="form" id="login"> <!--method post maybe-->
-                        <h1 class="form_title">Welcome Back!</h1>
-                        <div class="form_message form_message-error"></div>
-
-                        <div class="form_input-group">
-                            <input type="text" class="form_input" autofocus placeholder="Enter Email">
-                            <div class="form_input-error-message"></div>
-                        </div>
-
-                        <div class="form_input-group">
-                            <input type="password" class="form_input" placeholder="Enter Password">
-                            <div class="form_input-error-message"></div>
-                        </div>
-
-                        <button class="form_button" type="submit">Login</button>
-
-                        <p class="form_text">
-                            <a href="#" class="form_link">Forgot Password?</a>
-                        </p>
-                        <p class="form_text">
-                            <a class="form_link" href="createAccount.html" id="linkCreateAccount">Don't have a CardFinder account? Create Account.</a>
-                        </p>
-                    </form>
-                    <!-- Create Account Form
-
-                    ****THIS WAS CHANGED AND MOVED TO createAccount.html for the database to work correctly**** -->
-
-                    <!--<form class="form form_hidden" id="createAccount" method="post" action="../PHP/create_user.php">
+                    <!-- Create Account Form -->
+                    <form class="form" id="createAccount" method="post" action="../PHP/create_user.php"> <!--method post maybe-->
                         <h1 class="form_title">Create Account</h1>
                         <div class="form_message form_message-error"></div>
 
                         <div class="form_input-group">
-                            <input type="text" id="userEmail" class="form_input" autofocus placeholder="Enter Email">
+                            <input type="text" name="user_email" id="userEmail" class="form_input" autofocus placeholder="Enter Email">
                             <div class="form_input-error-message"></div>
                         </div>
 
                         <div class="form_input-group">
-                            <input type="password" class="form_input" placeholder="Enter Password">
+                            <input type="password" name="user_password" class="form_input" placeholder="Enter Password">
                             <div class="form_input-error-message"></div>
                         </div>
 
                         <div class="form_input-group">
-                            <input type="password" class="form_input" placeholder="Confirm Password">
+                            <input type="password" name="user_pass_confirm" class="form_input" placeholder="Confirm Password">
                             <div class="form_input-error-message"></div>
                         </div>
 
@@ -99,12 +72,12 @@
                         <p class="form_text">
                             <a class="form_link" href="./" id="linkLogin">Already have a CardFinder Account? Sign In.</a>
                         </p>
-                    </form> -->
+                    </form>
                 </div>
         </main>
 
         
         <script src="../JavaScript/toggleButton.js" async defer></script>
-        <!--<script src="../JavaScript/Login_SignUp.js"></script>-->
+        <!--<script src="../JavaScript/Login_SignUp.js"></script> Commented out for testing PHP-->
     </body>
 </html>

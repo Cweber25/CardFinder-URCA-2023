@@ -1,5 +1,3 @@
-// Connects to the "cardfinder_databse" & inserts values into "user_accounts" table
-// The table consists of two fields, user_email, user_password
 <?php
    echo "PHP execution successful ";
 
@@ -26,9 +24,14 @@
 
    if (mysqli_query($conn,$sql_query)) {
       echo "<br> Account Created!";
+
+      header("Location: http://localhost/cardfinder/HTML/accountSuccess.html", true, 301);
+      exit();
    }
    else
    {
       echo "<br> Error: " . $sql . '<br>' . $conn -> error; 
    }
+
+  
 ?>

@@ -57,7 +57,7 @@ header {
 .navbar {
     width: 100%;
     height: 60px;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -72,7 +72,7 @@ header {
 
 .navbar .links {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .navbar .toggle_btn {
@@ -186,4 +186,9 @@ header {
     display: flex;
     justify-content: center;
     background-color: #2d2e2e;
+}
+
+/* User Dropdown Menu Styling */
+.user_options {
+    color: red;
 }

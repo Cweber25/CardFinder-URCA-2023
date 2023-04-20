@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<script type="text/javascript" src="../JavaScript/getCard.js"></script>
+<script type="text/javascript" src="../JavaScript/advancedSearch.js"></script>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>CardFinder</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="../CSS/navbar.css">
+        <link rel="stylesheet" href="../CSS/searchBar.css">
+        <link rel="stylesheet" href="../CSS/homePageCards.css"/>
+        <link rel="stylesheet" href="../CSS/cardInfoBox.css"/>
+        <link rel="stylesheet" href="../CSS/singUpForm.css"/>
+    </head>
+    <body>  
+        <!-- onload="cardList();" Add this for advancedSearch to work. -->
+        <header>
+            <div class="navbar">
+                <div class="logo"><a href="../HTML/home.html">CardFinder</a></div>
+                <ul class="links">
+                    <li><a href="../HTML/home.html">Home</a></li>
+                    <li><a href="../HTML/decks.html">Decks</a></li>
+                    <li><a href="../HTML/about.html">About</a></li>
+                </ul>
+                <div class="links">
+                    <a href="../HTML/signIn.html" class="action_btn">Sign In</a>
+                    <div class="profile_icon" onclick="showUserOptions()">
+                        <i class="fa-solid fa-user" id="profileIcon"></i>
+                    </div>
+                </div>
+                <div class="toggle_btn" onclick="toggleButton()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+            <div class="dropdown_menu">
+                <li><a href="../HTML/home.html">Home</a></li>
+                    <li><a href="../HTML/decks.html">Decks</a></li>
+                    <li><a href="../HTML/about.html">About</a></li>
+                <li><a href="../HTML/signIn.html" class="action_btn">Sign In</a></li>
+                <li><i class="fa-solid fa-user profile_icon"></i></li>
+            </div>
+        </header>
+        <main>
+                <div class="signInForm">
+                    <!-- Login Form -->
+                    <form class="form" id="login"> <!--method post maybe-->
+                        <h1 class="form_title">Welcome Back!</h1>
+                        <div class="form_message form_message-error"></div>
+
+                        <div class="form_input-group">
+                            <input type="text" class="form_input" autofocus placeholder="Enter Email">
+                            <div class="form_input-error-message"></div>
+                        </div>
+
+                        <div class="form_input-group">
+                            <input type="password" class="form_input" placeholder="Enter Password">
+                            <div class="form_input-error-message"></div>
+                        </div>
+
+                        <button class="form_button" type="submit">Login</button>
+
+                        <p class="form_text">
+                            <a href="#" class="form_link">Forgot Password?</a>
+                        </p>
+                        <p class="form_text">
+                            <a class="form_link" href="../HTML/createAccount.html" id="linkCreateAccount">Don't have a CardFinder account? Create Account.</a>
+                        </p>
+                    </form>
+                </div>
+        </main>
+
+        <script src="../JavaScript/assortedFunctions.js" async defer></script>
+        <script src="../JavaScript/toggleButton.js" async defer></script>
+    </body>
+</html>

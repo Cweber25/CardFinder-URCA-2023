@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <script type="text/javascript" src="../JavaScript/getCard.js"></script>
-<script type="text/javascript" src="../JavaScript/advancedSearch.js"></script>
+<script type="text/javascript" src="../JavaScript/AdvancedSearchComplete.js"></script>
 
 <html>
     <head>
@@ -15,12 +15,13 @@
         <link rel="stylesheet" href="../CSS/searchBar.css">
         <link rel="stylesheet" href="../CSS/homePageCards.css"/>
         <link rel="stylesheet" href="../CSS/cardInfoBox.css"/>
+        <link rel="stylesheet" href="../CSS/ASdropdown.css"/>
     </head>
-    <body>  
+    <body onload="fetchCard();">  
         <!-- onload="cardList();" Add this for advancedSearch to work. -->
         <header>
             <div class="navbar">
-                <div class="logo"><a href="../HTML/home.html">CardFinder</a></div>
+                <div class="logo"><a href="../HTML/home.html"><img src="../images/CardFinderLogoWhite.png" id="CFlogo"></a></div>
                 <ul class="links">
                     <li><a href="../HTML/home.html">Home</a></li>
                     <li><a href="../HTML/decks.html">Decks</a></li>
@@ -28,10 +29,17 @@
                 </ul>
                 <div class="links">
                     <a href="../HTML/signIn.html" class="action_btn">Sign In</a>
-                    <div class="profile_icon">
+                    <div class="profile_icon" onclick="showUserOptions()">
                         <i class="fa-solid fa-user" id="profileIcon"></i>
                     </div>
+                    <!--<div class="user_options">
+                        <ul>
+                            <li>User: <label>Hello</label></li>
+                            <li>Decks: <a href="#">My Decks</a></li>
+                        </ul>
+                    </div>-->
                 </div>
+    
                 <div class="toggle_btn" onclick="toggleButton()">
                     <i class="fa-solid fa-bars"></i>
                 </div>
@@ -40,12 +48,12 @@
                 <li><a href="../HTML/home.html">Home</a></li>
                     <li><a href="../HTML/decks.html">Decks</a></li>
                     <li><a href="../HTML/about.html">About</a></li>
-                <li><a href="#" class="action_btn">Sign In</a></li>
+                <li><a href="../HTML/signIn.html" class="action_btn">Sign In</a></li>
                 <li><i class="fa-solid fa-user profile_icon"></i></li>
             </div>
         </header>
         <main>
-            <!--<div class="container">
+            <div class="container">
                 <form action="" method="get" class="search_bar">
                     <input type="text" placeholder="Search for a MTG card . . ." name="q" id="searchBar" onkeypress="return searchKeyPress(event);">
                     <button type="button" onclick="searchCard();" id="btn"><i class="fa-solid fa-magnifying-glass searchIcon"></i></button>
@@ -60,8 +68,33 @@
                         return true;
                     }
                 </script>
-            </div>-->
-            <!--<div class="cardsContainer">
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="fa-sharp fa-solid fa-sliders"></i></button>
+                    <div class="dropdown-content">
+                        <form>
+                            <fieldset>
+                              <label for="MA">Mana Amount</label><br>
+                              <input type="number" id="manaAmount" name="MA"><br>
+                              <label for="MT">Mana Type</label><br>
+                              <input type="checkbox" id="manaTypeRed" name="red" value="Red">
+                              <label for="manaTypeRed"> Red </label>
+                              <input type="checkbox" id="manaTypeBlue" name="Blue" value="Blue">
+                              <label for="manaTypeBlue"> Blue </label><br><br>
+                              <input type="checkbox" id="manaTypeGreen" name="Green" value="Green">
+                              <label for="manaTypeGreen"> Green </label>
+                              <input type="checkbox" id="manaTypeBlack" name="Black" value="Black">
+                              <label for="manaTypeBlack"> Black </label><br><br>
+                              <input type="checkbox" id="manaTypeWhite" name="White" value="White">
+                              <label for="manaTypeWhite"> White </label>
+                              <input type="checkbox" id="manaTypeColorless" name="Colorless" value="Colorless">
+                              <label for="manaTypeColorless"> Colorless </label><br><br>
+                              <input type="button" value="Submit" onclick="cardList()">
+                            </fieldset>
+                          </form>
+                    </div>
+                  </div>
+            </div>
+            <div class="cardsContainer">
                 <div class="leftCard">
                     <img class="cardImageSide" id="cardL" src="../images/mtgCardBack.jpg">
                 </div>
@@ -70,7 +103,7 @@
                 </div>
 
                 <div class="centerCard">
-                     <img class="cardImageCenter" src="../images/mtgCardBack.jpg">
+                    <!-- <img class="cardImageCenter" src="../images/mtgCardBack.jpg"> -->
                     <img class="cardImageCenter" id="card">
                 </div>
 
@@ -81,7 +114,7 @@
                     <img class="cardImageSide" id="cardR" src="../images/mtgCardBack.jpg">
                 </div>
                 
-            </div> 
+            </div>
 
             <div class="container2">
                 <div class="cardInfoBox">
@@ -121,10 +154,11 @@
                         <p id="cardFlavorText"></p>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </main>
 
         
+        <script src="../JavaScript/assortedFunctions.js" async defer></script>
         <script src="../JavaScript/toggleButton.js" async defer></script>
     </body>
 </html>

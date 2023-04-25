@@ -25,7 +25,7 @@
    if (mysqli_query($conn,$sql_query)) {
       echo "<br> Account Created!";
 
-      header("Location: http://localhost/cardfinder/HTML/accountSuccess.html", true, 301);
+      header("Location: http://localhost/cardfinder_XAMPP/HTML/accountSuccess.html", true, 301);
       exit();
    }
    else

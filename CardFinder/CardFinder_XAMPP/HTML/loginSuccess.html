@@ -15,6 +15,8 @@
         <link rel="stylesheet" href="../CSS/searchBar.css">
         <link rel="stylesheet" href="../CSS/homePageCards.css"/>
         <link rel="stylesheet" href="../CSS/cardInfoBox.css"/>
+        <link rel="stylesheet" href="../CSS/singUpForm.css"/>
+        <link rel="stylesheet" href="../CSS/successPage.css"/>
     </head>
     <body>  
         <!-- onload="cardList();" Add this for advancedSearch to work. -->
@@ -40,12 +42,20 @@
                 <li><a href="../HTML/home.html">Home</a></li>
                     <li><a href="../HTML/decks.html">Decks</a></li>
                     <li><a href="../HTML/about.html">About</a></li>
-                <li><a href="#" class="action_btn">Sign In</a></li>
+                <li><a href="../HTML/signIn.html" class="action_btn">Sign In</a></li>
                 <li><i class="fa-solid fa-user profile_icon"></i></li>
             </div>
         </header>
         <main>
-            
+                <div class="signInForm">
+                    <!-- Account Creation Splash Screen -->
+                    <form class="form" id="createAccount" method="post" action="../PHP/create_user.php"> 
+                        <h1 class="form_title">You have been logged in Successfully!</h1>
+                        <div class="form_input-group">
+                            <img src="../images/cardfinderlogo.png" class="success_img">
+                            <h1 class="form-title"></h2>
+                    </form>
+                </div>
         </main>
 
         

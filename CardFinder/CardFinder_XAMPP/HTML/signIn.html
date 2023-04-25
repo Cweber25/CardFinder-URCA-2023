@@ -21,7 +21,7 @@
         <!-- onload="cardList();" Add this for advancedSearch to work. -->
         <header>
             <div class="navbar">
-                <div class="logo"><a href="../HTML/home.html">CardFinder</a></div>
+                <div class="logo"><a href="../HTML/home.html"><img src="../images/CardFinderLogoWhite.png" id="CFlogo"></a></div>
                 <ul class="links">
                     <li><a href="../HTML/home.html">Home</a></li>
                     <li><a href="../HTML/decks.html">Decks</a></li>
@@ -48,21 +48,21 @@
         <main>
                 <div class="signInForm">
                     <!-- Login Form -->
-                    <form class="form" id="login"> <!--method post maybe-->
+                    <form class="form" id="login" method="post" action="../PHP/user_login.php">
                         <h1 class="form_title">Welcome Back!</h1>
                         <div class="form_message form_message-error"></div>
 
                         <div class="form_input-group">
-                            <input type="text" class="form_input" autofocus placeholder="Enter Email">
+                            <input type="text" name="user_email" class="form_input" autofocus placeholder="Enter Email">
                             <div class="form_input-error-message"></div>
                         </div>
 
                         <div class="form_input-group">
-                            <input type="password" class="form_input" placeholder="Enter Password">
+                            <input type="password" name="user_password" class="form_input" placeholder="Enter Password">
                             <div class="form_input-error-message"></div>
                         </div>
 
-                        <button class="form_button" type="submit">Login</button>
+                        <input class="form_button" type="submit" value="Login">
 
                         <p class="form_text">
                             <a href="#" class="form_link">Forgot Password?</a>

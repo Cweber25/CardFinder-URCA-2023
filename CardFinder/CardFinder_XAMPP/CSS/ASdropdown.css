@@ -2,10 +2,9 @@
 .dropbtn {
     background: rgba(255, 255, 255, 0.2);
     color: white;
-    padding: 10px;
+    padding: 7px;
     font-size: 16px;
-    border: 1px solid black;
-    border-radius: 25px;
+    border-radius: 12px;
     margin-left: 5px;
   }
   
@@ -19,7 +18,7 @@
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #716969;
     min-width: 200px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -41,3 +40,7 @@
   
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {background-color: rgba(255, 255, 255, 0.5);}
+
+  i.fa-sharp {
+    color: rgba(255, 255, 255, 0.8);
+  }

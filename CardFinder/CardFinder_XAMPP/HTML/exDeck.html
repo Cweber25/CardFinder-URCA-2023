@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <script type="text/javascript" src="../JavaScript/getCard.js"></script>
-<script type="text/javascript" src="../JavaScript/AdvancedSearchComplete.js"></script>
-<script type="text/javascript" src="../JavaScript/deckCreate.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<script type="text/javascript" src="../JavaScript/advancedSearch.js"></script>
+<script type="text/javascript" src="../JavaScript/makeDeck.js"></script>
+
 
 <html>
     <head>
@@ -17,13 +17,12 @@
         <link rel="stylesheet" href="../CSS/searchBar.css">
         <link rel="stylesheet" href="../CSS/homePageCards.css"/>
         <link rel="stylesheet" href="../CSS/cardInfoBox.css"/>
-        <link rel="stylesheet" href="../CSS/ASdropdown.css"/>
     </head>
-    <body>  
+    <body >  
         <!-- onload="cardList();" Add this for advancedSearch to work. -->
         <header>
             <div class="navbar">
-                <div class="logo"><a href="../HTML/home.html"><img src="../images/CardFinderLogoWhite.png" id="CFlogo"></a></div>
+                <div class="logo"><a href="../HTML/home.html">CardFinder</a></div>
                 <ul class="links">
                     <li><a href="../HTML/home.html">Home</a></li>
                     <li><a href="../HTML/decks.html">Decks</a></li>
@@ -43,23 +42,45 @@
                 <li><a href="../HTML/home.html">Home</a></li>
                     <li><a href="../HTML/decks.html">Decks</a></li>
                     <li><a href="../HTML/about.html">About</a></li>
-                <li><a href="../HTML/signIn.html" class="action_btn">Sign In</a></li>
+                <li><a href="#" class="action_btn">Sign In</a></li>
                 <li><i class="fa-solid fa-user profile_icon"></i></li>
             </div>
         </header>
         <main>
-            <div class="container">
-                <form action="" method="get" class="search_bar">
-                    <input type="text" placeholder="Please enter the name of the deck you would like to create" name="q" id="searchBar" >
-                    <button type="button" onclick="createDeck();" id="btn"><i class="fa-regular fa-pen-to-square"></i></i></i></button>
-                </form>
-            </div>
-            <div class="container" id="output">
-                <a href="exDeck.html"> Example Deck </a> 
-            </div>
-           
+            <style>
+                /* Styling for the card grid */
+                .card-grid {
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                  grid-gap: 20px;
+                  justify-items: center;
+                  align-items: start;
+                  padding-left: 20px;
+                  padding-right: 20px;
+                }
+                
+                .card {
+                  display: flex;
+                  flex-direction: column;
+                  align-items: center;
+                  padding: 10px;
+                  border: 1px solid black;
+                }
+                
+                .card img {
+                  width: 200px;
+                  height: 280px;
+                }
+              </style>
+            </head>
+            <body onload="makeDeck()">
+                <div class="card-grid"></div>
+
+                    
+              </body>
         </main>
 
+        
+        <script src="../JavaScript/toggleButton.js" async defer></script>
     </body>
-    
 </html>
